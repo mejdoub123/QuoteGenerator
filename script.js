@@ -21,7 +21,8 @@ const newQuote = () => {
   quoteAuthor.textContent = quote.author ? quote.author : "Unknown";
 
   if (quoteAuthor.textContent !== "Unknown") {
-    quoteAuthor.style.color = "#511055";
+    if (quoteAuthor.style.color !== "#511055")
+      quoteAuthor.style.color = "#511055";
     complete();
     return;
   }
